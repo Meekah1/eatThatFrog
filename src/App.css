@@ -19,5 +19,43 @@
 }
 
 .h1-style {
-  
+  margin: auto 80px;
+  width: 600px;
+  height: 200px;
+}
+
+.h1-style > h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 62px;
+  font-weight: bold;
+}
+
+.h1-style > p {
+  font-size: 32px;
+}
+
+.card-style1 {
+ display: flex;
+ 
+}
+
+.card-content {
+  font-family: 'Poppins', sans-serif;
+  margin: auto 60px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.card-design {
+  width: 260px;
+  height: 360px;
+  border-radius: 10px;
+}
+
+.star-style {
+
+}
+
+.price-style > span {
+  font-weight: Bold;
 }
