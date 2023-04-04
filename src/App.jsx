@@ -5,6 +5,9 @@ import Card from './components/Cards';
 // import './App.css'
 
 function App() {
+  const numbers = [1, 2, 3, 4];
+  const newNumbers = numbers.map(x => x * 2);
+  console.log(newNumbers);
 
   return (
     <div className='App'>
