@@ -3,23 +3,18 @@ import '../App.css'
 
 function Card (props) {
   return (
-    <div className='card-style'>
-      <div className='card-content'>
-        <img
-          alt='card'
-          // src={props.images}
-          src={`../images/${props.img}`}
-          className='card-design'
-        />
-        <p>
-          <img alt='star' src='images/Star1.png' className='star-style' />
-          5.0 (6).USA
-        </p>
-        <p> {props.name} </p>
-        <p className='price-style'>
-          <span>From $136 </span>/ person
-        </p>
+    <div className='card'>
+      <img src={`./images/${props.img}`} className='card--image' />
+      <div className='card--stats'>
+        <img src='./images/Star1.png' className='card--star' />
+        <span>{props.rating}</span>
+        <span className='gray'>({props.reviewCount}) • </span>
+        <span className='gray'>{props.location}</span>
       </div>
+      <p className='card--title'>{props.title}</p>
+      <p className='card--price'>
+        <span className='bold'>From ${props.price}</span> / person
+      </p>
     </div>
   );
 }

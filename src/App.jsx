@@ -24,7 +24,7 @@ function App() {
     <div className='App'>
       <Header />
       <Collections />
-      <div className='card-style1'>
+      <section className="cards-list">
         {cards}
         {/* {data.map((arrayOfData) => (
           <Card
@@ -36,7 +36,7 @@ function App() {
             location={arrayOfData.location}
           />
         ))} */}
-      </div>
+      </section>
     </div>
   );
 }
