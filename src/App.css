@@ -15,7 +15,7 @@
 
 .image-div-style {
   width: 59%;
-  margin: 30px auto;
+  margin: 10px auto;
 }
 
 .h1-style {
@@ -41,7 +41,7 @@
 
 .card-content {
   font-family: 'Poppins', sans-serif;
-  margin: auto 60px;
+  margin: auto 10px;
   font-size: 20px;
   line-height: 1.6;
 }
@@ -50,6 +50,9 @@
   width: 260px;
   height: 360px;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* .star-style {
