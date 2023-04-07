@@ -1,46 +1,41 @@
-// import { useState } from 'react'
+import React from 'react'
 import Header from './components/Header';
 import Collections from './components/Collections';
 import Card from './components/Cards';
+import data from './components/data';
 // import './App.css'
 
 function App() {
-  const numbers = [1, 2, 3, 4];
-  const newNumbers = numbers.map(x => x * 2);
-  console.log(newNumbers);
+    const cards = data.map(arrayOfData => {
+      return (
+        <Card
+          img={arrayOfData.coverImg}
+          key={arrayOfData.id}
+          title={arrayOfData.title}
+          price={arrayOfData.price}
+          rating={arrayOfData.stats.rating}
+          reviewCount={arrayOfData.stats.reviewCount}
+          location={arrayOfData.location}
+        />
+      );
+    })
 
   return (
     <div className='App'>
       <Header />
       <Collections />
       <div className='card-style1'>
-        <Card
-          images='images/image1.png'
-          name='swimmer'
-          phone='+2348135922644'
-          email='bolarinwa@gmail.com'
-        />
-
-        <Card
-          images='images/mountainBike.png'
-          name='Bike'
-          phone='+2347065551350'
-          email='akeem@gmail.com'
-        />
-
-        <Card
-          images='images/weddingPhotography.png'
-          name='Wedding'
-          phone='+2348089031806'
-          email='bolarinwabdulakeem@gmail.com'
-        />
-
-        <Card
-          images='images/image1.png'
-          name='swimmer'
-          phone='08135922644'
-          email='bolarinwabdulakeem@gmail.com'
-        />
+        {cards}
+        {/* {data.map((arrayOfData) => (
+          <Card
+            key={arrayOfData.id}
+            title={arrayOfData.title}
+            price={arrayOfData.price}
+            rating={arrayOfData.stats.rating}
+            reviewCount={arrayOfData.stats.reviewCount}
+            location={arrayOfData.location}
+          />
+        ))} */}
       </div>
     </div>
   );
