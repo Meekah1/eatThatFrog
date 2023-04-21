@@ -16,6 +16,7 @@ function App() {
           rating={arrayOfData.stats.rating}
           reviewCount={arrayOfData.stats.reviewCount}
           location={arrayOfData.location}
+          openSport={arrayOfData.openSpots}
         />
       );
     })
