@@ -35,7 +35,7 @@ section {
 }
 
 .hero--photo {
-    max-width: 400px;
+    max-width: 780px;
     align-self: center;
 }
 
@@ -55,6 +55,7 @@ section {
 }
 
 .card {
+    position: relative;
     width: 264px;
     font-size: 12px;
     flex: 0 0 auto;        /*  ADD */
@@ -81,6 +82,16 @@ section {
 
 .card--star {
     height: 14px;
+}
+
+.card--badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
 }
 
 /* ADD */
