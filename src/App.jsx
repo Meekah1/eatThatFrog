@@ -6,17 +6,11 @@ import data from './components/data';
 // import './App.css'
 
 function App() {
-    const cards = data.map(arrayOfData => {
+    const cards = data.map(item => {
       return (
         <Card
-          img={arrayOfData.coverImg}
-          key={arrayOfData.id}
-          title={arrayOfData.title}
-          price={arrayOfData.price}
-          rating={arrayOfData.stats.rating}
-          reviewCount={arrayOfData.stats.reviewCount}
-          location={arrayOfData.location}
-          openSport={arrayOfData.openSpots}
+          key={item.id}
+          {...item}
         />
       );
     })

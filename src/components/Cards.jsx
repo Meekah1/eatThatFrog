@@ -1,25 +1,25 @@
+import React from 'react';
 import '../App.css'
 
 
 function Card (props) {
   
-  let badgeText;
-
+  let badgeText
   if (props.openSports === 0) {
-    badgeText = 'Sold Out';
-  } else if (props.location === 'Online') {
-    badgeText = 'Online';
+    badgeText = "Sold Out"
+  } else if (props.location === "Online") {
+    badgeText = "Online"
   } 
 
 
     return (
       <div className='card'>
         {badgeText && <div className='card--badge'>{badgeText}</div>}
-        <img src={`./images/${props.img}`} className='card--image' />
+        <img src={`./images/${props.coverImg}`} className='card--image' />
         <div className='card--stats'>
           <img src='./images/Star1.png' className='card--star' />
-          <span>{props.rating}</span>
-          <span className='gray'>({props.reviewCount}) • </span>
+          <span>{props.stats.rating}</span>
+          <span className='gray'>({props.stats.reviewCount}) • </span>
           <span className='gray'>{props.location}</span>
         </div>
         <p className='card--title'>{props.title}</p>
